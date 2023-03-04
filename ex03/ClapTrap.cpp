@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 03:37:40 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/02 00:07:42 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 23:15:28 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _ep(10), _atk(0){
 }
 
 ClapTrap::ClapTrap(std::string name, int hp, int ep, int atk): _name(name), _hp(hp), _ep(ep), _atk(atk){
-	std::cout << "ClapTrap" << this->_name << "Create"<< std::endl;
+	std::cout << "ClapTrap " << this->_name << " Create"<< std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &cp ){

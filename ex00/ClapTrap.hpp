@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 03:37:58 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/01 23:11:56 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 21:55:24 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class ClapTrap {
 	private:
 		std::string		_name;
-		int				_hit_point;
-		int				_energy_point;
-		int				_attack_dm;
+		int				_hp;
+		int				_ep;
+		int				_atk;
 	public:
 		ClapTrap(std::string name);
 		ClapTrap( const ClapTrap &cp );

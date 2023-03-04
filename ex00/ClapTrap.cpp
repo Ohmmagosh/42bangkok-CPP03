@@ -6,14 +6,14 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 03:37:40 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/01 23:18:36 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 23:15:38 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hit_point(10), _energy_point(10), _attack_dm(0){
-	std::cout << "ClapTrap" << this->_name << "Create"<< std::endl;
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _ep(10), _atk(0){
+	std::cout << "ClapTrap " << this->_name << " Create"<< std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &cp ){
@@ -27,31 +27,31 @@ ClapTrap::~ClapTrap(){
 ClapTrap& ClapTrap::operator=(const ClapTrap &cp){
 	if (this != &cp){
 		this->_name = cp._name;
-		this->_hit_point = cp._hit_point;
-		this->_energy_point = cp._energy_point;
-		this->_attack_dm = cp._attack_dm;
+		this->_hp = cp._hp;
+		this->_ep = cp._ep;
+		this->_atk = cp._atk;
 	}
 	return (*this);
 }
 
 void	ClapTrap::attack(const std::string &target){
-	std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing " << this->_attack_dm << " points of damage! " << std::endl;
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing " << this->_atk << " points of damage! " << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount){
-	if (this->_hit_point <= 0){
+	if (this->_hp <= 0){
 		std::cout << "ClapTrap can not take Damage!!!" << std::endl;
 		return ;
 	}
-	this->_hit_point -= amount;
+	this->_hp -= amount;
 	std::cout << "ClapTrap take Damage "<< amount << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount){
-	if (this->_hit_point <= 0){
+	if (this->_hp <= 0){
 		std::cout << "ClapTrap can not be repaired" << std::endl;
 		return ;
 	}
-	this->_hit_point += amount;
+	this->_hp += amount;
 	std::cout << "ClapTrap be repaired " << amount << std::endl;
 }

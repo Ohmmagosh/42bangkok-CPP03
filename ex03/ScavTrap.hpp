@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:20:51 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/02 02:08:13 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 21:47:31 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ class ScavTrap: virtual public ClapTrap{
 		ScavTrap( const ScavTrap &cp );
 		ScavTrap& operator=( const ScavTrap &cp );
 		~ScavTrap();
-		void guardGate();
+		void	attack( const std::string& target );
+		void	guardGate();
 };
 
 #endif

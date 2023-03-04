@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:20:45 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/02 00:00:22 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 22:43:36 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,8 @@ ScavTrap::~ScavTrap(){
 
 void	ScavTrap::guardGate(){
 	std::cout << "Noob!!!" << std::endl;
+}
+
+void	ScavTrap::attack(const std::string &target){
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_atk << " points of damage! " << std::endl;
 }

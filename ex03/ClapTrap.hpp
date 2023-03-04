@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 03:37:58 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/02 02:34:14 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 21:41:41 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ClapTrap {
 	public:
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap &cp );
-		ClapTrap(std::string name, int hp, int ep, int atk);
+		ClapTrap( std::string name, int hp, int ep, int atk );
 		ClapTrap& operator=( const ClapTrap &cp);
 		~ClapTrap();
 		void	attack( const std::string& target );

@@ -6,7 +6,7 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:20:51 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/03/01 23:52:33 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/03/03 23:13:07 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class ScavTrap: public ClapTrap{
 		ScavTrap( const ScavTrap &cp );
 		ScavTrap& operator=( const ScavTrap &cp );
 		~ScavTrap();
-		void guardGate();
+		void	attack(const std::string &target);
+		void	guardGate();
 };
 
 #endif
